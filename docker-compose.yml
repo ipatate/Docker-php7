@@ -1,3 +1,9 @@
+mysql:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: password
+  ports:
+    - "3306:3306"
 web:
   image: nginx:latest
   ports:
@@ -7,8 +13,7 @@ web:
     - ./default.conf:/etc/nginx/conf.d/default.conf
   links:
     - php
-  external_links:
-    - mydb
+    - mysql
 php:
   build: .
   volumes:
