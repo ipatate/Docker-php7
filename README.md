@@ -3,6 +3,8 @@ Docker base with docker-compose, one container for nginx, one container for php7
 for mac user => install [docker-machine](https://docs.docker.com/machine/install-machine/)
 and [docker-compose](https://docs.docker.com/compose/install/)
 
+No phpmyadmin, i recommand to use (mac user) [sequel pro](https://www.sequelpro.com/)
+
 In root dir:
 * docker-compose build
 * docker-compose up -d
